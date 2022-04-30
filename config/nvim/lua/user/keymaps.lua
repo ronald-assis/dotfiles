@@ -33,6 +33,14 @@ keymap("n", "<C-w>", ":Bdelete<CR>", opts)
 -- Nvimtree
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 
+-- Insert --
+-- Press jj fast to enter
+keymap("i", "jj", "<ESC>", opts)
+
+-- Find files/live grep
+keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.find_files({layout_strategy='vertical',layout_config={width=0.5}})<cr>", opts)
+keymap("n", "<C-f>", "<cmd>lua require'telescope.builtin'.live_grep({layout_strategy='vertical',layout_config={width=0.5}})<cr>", opts)
+
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
