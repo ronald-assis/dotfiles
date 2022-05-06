@@ -32,9 +32,9 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Move between tabs
-keymap("n", "<S-h>", ":bp<CR>", opts)
-keymap("n", "<S-l>", ":bn<CR>", opts)
-keymap("n", "<C-w>", ":Bdelete<CR>", opts)
+keymap("n", "<leader>h", ":bp<CR>", opts)
+keymap("n", "<leader>l", ":bn<CR>", opts)
+keymap("n", "<leader>w", ":Bdelete<CR>", opts)
 
 -- Nvimtree
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
@@ -53,4 +53,3 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
