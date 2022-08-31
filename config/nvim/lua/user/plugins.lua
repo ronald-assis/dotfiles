@@ -67,7 +67,7 @@ return packer.startup(function(use)
   use "dracula/vim"
   use "gkjgh/cobalt"
   use "haishanh/night-owl.vim"
-  
+
   -- Completion
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
@@ -89,13 +89,13 @@ return packer.startup(function(use)
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
-  
+
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
