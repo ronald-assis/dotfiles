@@ -18,6 +18,7 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
+    { "christoomey/vim-tmux-navigator" },
   },
   change_detection = { notify = false }
 })
