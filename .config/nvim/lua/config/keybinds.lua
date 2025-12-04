@@ -20,8 +20,8 @@ vim.opt.splitbelow = true -- horizontal splits open below
 -- Resize splits (move borders)
 vim.keymap.set("n", "<leader>+", ":resize +5<CR>", { noremap = true, silent = true, desc = "Aumentar altura" })
 vim.keymap.set("n", "<leader>-", ":resize -5<CR>", { noremap = true, silent = true, desc = "Diminuir altura" })
-vim.keymap.set("n", "<leader><", ":vertical resize +5<CR>", { noremap = true, silent = true, desc = "Aumentar largura" })
-vim.keymap.set("n", "<leader>>", ":vertical resize -5<CR>", { noremap = true, silent = true, desc = "Diminuir largura" })
+vim.keymap.set("n", "<leader>>", ":vertical resize +5<CR>", { noremap = true, silent = true, desc = "Aumentar largura" })
+vim.keymap.set("n", "<leader><", ":vertical resize -5<CR>", { noremap = true, silent = true, desc = "Diminuir largura" })
 
 -- Window navigation with Ctrl + h/j/k/l
 -- vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
