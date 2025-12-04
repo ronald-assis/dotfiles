@@ -8,8 +8,20 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent
 
 
 -- Create a new empty buffer in a vertical/horizontal split
-vim.keymap.set("n", "<leader>sv", ":vnew<CR>", opts) -- vertical split with a new buffer
-vim.keymap.set("n", "<leader>sh", ":new<CR>", opts)  -- horizontal split with a new buffer
+vim.keymap.set("n", "<leader>sv", ":botright vnew<CR>", opts) -- vertical split with a new buffer
+vim.keymap.set("n", "<leader>sh", ":new<CR>", opts)           -- horizontal split with a new buffer
+vim.keymap.set("n", "<leader>se", "<C-w>=", { noremap = true, silent = true, desc = "Equalizar splits" })
+vim.keymap.set("n", "<leader>sx", ":close<CR>", { noremap = true, silent = true, desc = "Fechar split" })
+
+-- Force new splits to open on the right and below
+vim.opt.splitright = true -- vertical splits open to the right
+vim.opt.splitbelow = true -- horizontal splits open below
+
+-- Resize splits (move borders)
+vim.keymap.set("n", "<leader>+", ":resize +5<CR>", { noremap = true, silent = true, desc = "Aumentar altura" })
+vim.keymap.set("n", "<leader>-", ":resize -5<CR>", { noremap = true, silent = true, desc = "Diminuir altura" })
+vim.keymap.set("n", "<leader><", ":vertical resize +5<CR>", { noremap = true, silent = true, desc = "Aumentar largura" })
+vim.keymap.set("n", "<leader>>", ":vertical resize -5<CR>", { noremap = true, silent = true, desc = "Diminuir largura" })
 
 -- Window navigation with Ctrl + h/j/k/l
 -- vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
@@ -24,7 +36,7 @@ vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", opts)   -- close current buffe
 vim.keymap.set("n", "<leader>bl", ":ls<CR>", opts)        -- list buffers
 
 -- quick NvimTree resize presets
---vim.keymap.set("n", "<leader>tr", ":NvimTreeResize 45<CR>", opts) -- reset/large
+vim.keymap.set("n", "<leader>tr", ":NvimTreeResize 45<CR>", opts) -- reset/large
 vim.keymap.set("n", "<leader>tn", ":NvimTreeResize 30<CR>", opts) -- reset/large
 
 vim.keymap.set("n", "<leader>tr", function()
