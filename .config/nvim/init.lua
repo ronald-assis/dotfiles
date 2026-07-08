@@ -1,5 +1,8 @@
-require('config.options')
-require('config.keybinds')
-require("config.lazy")
+-- require('config.options')
+-- require('config.keybinds')
+-- require("config.lazy")
 
-require("plugins.nvim-tree")
+-- require("plugins.nvim-tree")
+
+require("ronald.core")
+require("ronald.lazy")
