@@ -46,5 +46,44 @@ To update your dotfiles, pull the latest changes from the repository:
     git pull origin main
     stow .
 
+## 7. Tmux Manual
+Prefix key is remapped from `C-b` to `C-a`. Every `prefix + ...` shortcut below means "press `C-a`, release, then press the key."
+
+### Panes
+| Shortcut | Action |
+|---|---|
+| `prefix + \|` | Split window vertically (new pane side by side) |
+| `prefix + -` | Split window horizontally (new pane stacked) |
+| `C-h` / `C-j` / `C-k` / `C-l` | Move focus between panes — no prefix needed; also moves seamlessly into/out of Neovim splits (vim-tmux-navigator) |
+| `prefix + h` (repeatable) | Resize pane left |
+| `prefix + j` (repeatable) | Resize pane down |
+| `prefix + k` (repeatable) | Resize pane up |
+| `prefix + l` (repeatable) | Resize pane right |
+| `prefix + m` | Toggle pane zoom (maximize/restore) |
+
+Resize bindings are "repeatable" (`bind -r`): after pressing `prefix` once, you can tap `h`/`j`/`k`/`l` again within the repeat window to keep resizing without pressing prefix each time.
+
+Mouse mode is enabled — click a pane to focus it, drag borders to resize, click a window name in the status bar to switch, and scroll to move through pane history.
+
+### Config
+| Shortcut | Action |
+|---|---|
+| `prefix + r` | Reload `~/.tmux.conf` |
+
+### Plugins (via TPM)
+Plugins are declared in `.tmux.conf` and managed by [TPM](https://github.com/tmux-plugins/tpm), installed at `~/.tmux/plugins/tpm`.
+
+| Shortcut | Action |
+|---|---|
+| `prefix + I` | Install plugins listed in `.tmux.conf` |
+| `prefix + U` | Update installed plugins |
+| `prefix + alt-u` | Remove plugins no longer listed in `.tmux.conf` |
+
+Configured plugins:
+- **vim-tmux-navigator** — enables the `C-h/j/k/l` pane navigation above, unified across tmux and Neovim
+- **tmux-themepack** — status bar theme (`powerline/default/cyan`)
+- **tmux-resurrect** — save/restore sessions manually (`prefix + Ctrl-s` to save, `prefix + Ctrl-r` to restore), including pane contents
+- **tmux-continuum** — auto-saves sessions periodically and auto-restores the last session when tmux starts
+
 ## Warning
 If the appearance looks off, install the Caskaydia Cove Nerd Fonts.
